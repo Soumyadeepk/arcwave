@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -15,12 +21,60 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.marquee_text {
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.mySwiper {
+  margin-left: 10vw !important;
+  margin-right: 10vw !important;
+  overflow: visible !important;
+}
+
+.interior_text {
+  color: #bbe5f1;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #bbe5f1;
+}
+
+.exterior_text {
+  color: #f67328;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f67328;
+}
+
+.hero-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  font-size: 0;
+}
+
+.clipped-text {
+  display: inline-block;
+  font-size: 250px;
+  margin-right: 100px;
+}
+
+.animateRTL {
+  animation: 0.4s slideLeft linear;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
   }
-  body {
-    color: white;
-    background: black;
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
